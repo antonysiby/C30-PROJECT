@@ -63,7 +63,12 @@ function setup() {
   breakButton.position(width - 200, height / 2 - 50);
   breakButton.class("breakbutton");
 
+  //breakButton.mouseClicked(handleButtonPress);
   breakButton.mousePressed(handleButtonPress);
+  //breakButton.mouse(handleButtonPress);
+  //breakButton.mousePressed(ButtonPress);
+
+
 }
 
 function draw() {
@@ -90,10 +95,23 @@ function draw() {
 }
 
 function handleButtonPress() {
+  /* jointLink=dettach();
+  setTimeout(() => {
+    bridge.break();
+  }, 1500); */
+
+  /* jointLink.dettach();
+  setTimeout(() => {
+    break();
+  }, 1500); */
+
+   /*jointLink.dettach();
+  setTimeout(() => {
+    bridge.break();
+  }, 5); */
 
    jointLink.dettach();
   setTimeout(() => {
     bridge.break();
-  }, 5); 
-
+  }, 1500); 
 }
